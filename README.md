@@ -80,3 +80,69 @@ console.log(getGrade(82));
 console.log(getGrade(56));
 console.log(getGrade(20));
 ```
+## Step 3
+The teacher is really happy with the program you have created so far. But now they want to have an easy way to check if a student has a passing grade. A passing grade is anything that is not an "F".
+
+Complete the function hasPassingGrade that takes a student score as a parameter. Your function should return true if the student has a passing grade and false if they do not.
+
+**Tips**
+
+Use the getGrade function to get the student's grade. Then check if the grade is passing or not.
+
+```javascript
+function hasPassingGrade(score) {
+  if (score > 59) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+console.log(hasPassingGrade(100));
+console.log(hasPassingGrade(53));
+console.log(hasPassingGrade(87));
+```
+
+## Step 4
+Now that the teacher has all of the information they need, they want to be able to message the student with the results.
+
+Complete the studentMsg function with totalScores and studentScore for parameters. The function should return a string representing a message to the student.
+
+If the student passed the course, the string should follow this format:
+
+**Example Code**
+Class average: average-goes-here. Your grade: grade-goes-here. You passed the course
+
+If the student failed the course, the string should follow this format:
+
+**Example Code**
+Class average: average-goes-here. Your grade: grade-goes-here. You failed the course.
+
+Replace average-goes-here with the average of the total scores. Replace grade-goes-here with the student's grade.
+
+**Tips**
+- Use the getAverage function to get the class average.
+- Use the getGrade function to get the student's grade.
+- Use string concatenation (+) to build the message.
+- Be careful with the punctuation and spaces in the message.
+
+```javascript
+function studentMsg(totalScores, studentScore) {
+  let totalScore = getAverage(totalScores);
+  let studentScor = getGrade(studentScore);
+
+  if (studentScor === "F") {
+    return `Class average: ${totalScore}. Your grade: ${studentScor}. You failed the course.`;
+  } else {
+    return `Class average: ${totalScore}. Your grade: ${studentScor}. You passed the course.`;
+  }
+}
+
+// Tests
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
+console.log(studentMsg([56, 23, 89, 42, 75, 11, 68, 34, 91, 19], 100));
+
+```
+
+
