@@ -1,4 +1,4 @@
-# JavaScriptAlgorithmAndDataStructure
+# JavaScript Algorithms and Data Structures Course by FreeCodeCamp
 
 ## STEP 1
  
