@@ -57,6 +57,11 @@ console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));
 | 60-69      | "D"  |
 | 0-59       | "F"  |
 
+| Name     | Age | Role      |
+|----------|-----|-----------|
+| Osinachi | 23  | Developer |
+| Ada      | 22  | Designer  |
+| Tunde    | 25  | Engineer  |
 
 ```javascript
 function getGrade(score) {
